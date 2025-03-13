@@ -25,5 +25,5 @@ int main() {
         std::cout << "\nBox 1 is not equal to Box 2\n";
     }
 
-    return 0;
+    eturn EXIT_SUCCESS;
 }

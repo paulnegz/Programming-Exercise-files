@@ -7,7 +7,7 @@ int main() {
     cout << "Box 1: " << box1 << endl;
     cout << "Box 2: " << box2 << endl;
 
-    boxType sumBox = box1 + box2;
+    boxType sumBox = box1 +  box2;
     cout << "Sum of Boxes: " << sumBox << endl;
 
     boxType diffBox = box1 - box2;
@@ -34,5 +34,5 @@ int main() {
     cin >> userBox;
     cout << "User Input Box: " << userBox << endl;
     
-    return 0;
+    return EXIT_SUCCESS;
 }

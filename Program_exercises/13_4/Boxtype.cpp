@@ -1,13 +1,14 @@
 #include "Boxtype.h"
-#include <iostream>
 using namespace std;
 
-boxType::boxType(double l, double w, double h) : rectangleType(l, w), height(h) {}
-
-void boxType::setDimension(double l, double w, double h) {
-    rectangleType::setDimension(l, w);
-    height = (h >= 0) ? h : 0;
+boxType::boxType(double l, double w, double h) : rectangleType(l, w) {
+    height = h;
 }
+
+// void boxType::setDimension(double l, double w, double h) {
+//     rectangleType::setDimension(l, w);
+//     height = (h >= 0) ? h : 0;
+// }
 
 double boxType::getHeight() const {
     return height;
@@ -84,11 +85,12 @@ boxType boxType::operator--(int) {
 }
 
 ostream& operator<<(ostream& os, const boxType& box) {
-    os << "Box Dimensions: (" << box.length << ", " << box.width << ", " << box.height << ")";
+    os << "Box Dimensions: (" << box.length << ", " << box.width << ", " << box.getHeight() << ")";
     return os;
 }
 
+
 istream& operator>>(istream& is, boxType& box) {
-    is >> box.length >> box.width >> box.height;
+    // is >> box.length >> box.width >> box.getHeight();
     return is;
 }

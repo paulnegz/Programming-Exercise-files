@@ -1,15 +1,16 @@
 #ifndef BOXTYPE_H
 #define BOXTYPE_H
-
+#include <iostream>
 #include "Rectangletype.h"
 
 class boxType : public rectangleType {
+
 private:
     double height;
 
 public:
     boxType(double l = 0, double w = 0, double h = 0);
-    void setDimension(double l, double w, double h);
+    // void setDimension(double l, double w, double h);
     double getHeight() const;
     double volume() const;
     double surfaceArea() const;
